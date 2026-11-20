@@ -86,6 +86,7 @@ ve.ui.MWAceEditorWidget.prototype.setup = function () {
 ve.ui.MWAceEditorWidget.prototype.teardown = function () {
 	this.loadingPromise.then( () => {
 		this.$input.removeClass( 'oo-ui-element-hidden' );
+		this.$keyboardHint.remove();
 		this.editor.destroy();
 		this.editor = null;
 	} ).always( () => {
@@ -110,6 +111,20 @@ ve.ui.MWAceEditorWidget.prototype.setupEditor = function () {
 	this.$input.addClass( 'oo-ui-element-hidden' );
 	this.editor = ace.edit( this.$ace[ 0 ] );
 	this.setMinRows( this.minRows );
+
+	// Keyboard accessibility (WCAG 2.1.2, no keyboard trap): while editing, Tab indents code, so
+	// Ace's accessibility mode is used: Escape stops editing and focuses the editor container,
+	// from where Tab moves on; Enter starts editing again. A hint is shown while editing.
+	this.editor.setOption( 'enableKeyboardAccessibility', true );
+	const hintId = OO.ui.generateElementId();
+	this.$keyboardHint = $( '<div>' )
+		.attr( 'id', hintId )
+		.addClass( 've-ui-mwAceEditorWidget-keyboardHint oo-ui-element-hidden' )
+		.text( ve.msg( 'visualeditor-mwaceeditor-keyboard-hint' ) );
+	this.$element.append( this.$keyboardHint );
+	this.editor.textInput.getElement().setAttribute( 'aria-describedby', hintId );
+	this.editor.on( 'focus', () => this.$keyboardHint.removeClass( 'oo-ui-element-hidden' ) );
+	this.editor.on( 'blur', () => this.$keyboardHint.addClass( 'oo-ui-element-hidden' ) );
 
 	// Autocompletion
 	this.editor.setOptions( {

@@ -1526,6 +1526,7 @@
 				"oojs-ui.styles.icons-editing-advanced"
 			],
 			"messages": [
+				"visualeditor-mwaceeditor-keyboard-hint",
 				"toc",
 				"visualeditor-dialog-table-collapsed",
 				"visualeditor-dialog-table-collapsible",
