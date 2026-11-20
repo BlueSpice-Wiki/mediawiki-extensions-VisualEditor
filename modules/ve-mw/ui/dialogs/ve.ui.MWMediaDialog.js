@@ -1211,6 +1211,14 @@ ve.ui.MWMediaDialog.prototype.switchPanels = function ( panel, noFocus ) {
 			this.actions.setMode( 'info' );
 			// Hide/show the panels
 			this.panels.setItem( this.mediaImageInfoPanel );
+			if ( !noFocus ) {
+				// The focused search result was hidden with the search panel, which would leave
+				// focus on the page body. Focus the next step instead.
+				const chooseAction = this.actions.get( { actions: 'choose', visible: true } )[ 0 ];
+				if ( chooseAction ) {
+					chooseAction.focus();
+				}
+			}
 			break;
 	}
 	this.currentPanel = panel || 'imageinfo';

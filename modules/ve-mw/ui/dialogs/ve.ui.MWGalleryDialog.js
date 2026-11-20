@@ -223,6 +223,8 @@ ve.ui.MWGalleryDialog.prototype.initialize = function () {
 		includeCommands: this.constructor.static.includeCommands,
 		excludeCommands: this.constructor.static.excludeCommands,
 		importRules: this.constructor.static.getImportRules(),
+		// Pass Escape / Ctrl+Enter on to the dialog (closes it / applies changes)
+		inDialog: this.constructor.static.name,
 		multiline: false
 	} );
 	this.highlightedAltTextInput = new OO.ui.TextInputWidget( {
@@ -289,6 +291,8 @@ ve.ui.MWGalleryDialog.prototype.initialize = function () {
 		includeCommands: this.constructor.static.includeCommands,
 		excludeCommands: this.constructor.static.excludeCommands,
 		importRules: this.constructor.static.getImportRules(),
+		// Pass Escape / Ctrl+Enter on to the dialog (closes it / applies changes)
+		inDialog: this.constructor.static.name,
 		multiline: false
 	} );
 	this.widthsInput = new OO.ui.NumberInputWidget( {

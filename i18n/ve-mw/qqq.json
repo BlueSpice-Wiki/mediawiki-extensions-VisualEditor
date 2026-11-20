@@ -317,6 +317,7 @@
 	"visualeditor-media-title-video": "Title of context item for embedded video\n{{Identical|Video}}",
 	"visualeditor-meta-tool": "Text of tool in the toolbar the lets users set categories, language links and other page settings.\n{{Identical|Options}}",
 	"visualeditor-mweditmode-tooltip": "Tooltip text for editor switching menu.",
+	"visualeditor-mwaceeditor-keyboard-hint": "Hint shown below a code editor (Ace, from the CodeEditor extension) in VisualEditor dialogs while the user is editing code, e.g. in the code block or formula dialog. Explains how to move keyboard focus out of the editor, as Tab inserts indentation there.",
 	"visualeditor-mweditmodesource-progress": "Title of progress bar shown while switching to source mode.",
 	"visualeditor-mweditmodesource-tool-current": "Label for tool that changes edit mode to source editing (or describes the mode if the user is already in that mode).",
 	"visualeditor-mweditmodesource-tool-unavailable": "'''Please translate \"Source\" as meaning \"Source codes\", not source of references.''' Label for tool that changes edit mode to source editing when it is not available.",

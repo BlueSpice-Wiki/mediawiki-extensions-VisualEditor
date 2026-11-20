@@ -293,6 +293,7 @@
 	"visualeditor-media-title-video": "Video",
 	"visualeditor-meta-tool": "Options",
 	"visualeditor-mweditmode-tooltip": "Switch editor",
+	"visualeditor-mwaceeditor-keyboard-hint": "Tab indents code. To leave the code editor, press Escape, then Tab.",
 	"visualeditor-mweditmodesource-progress": "Switching to source editing…",
 	"visualeditor-mweditmodesource-tool-current": "Source editing",
 	"visualeditor-mweditmodesource-tool-unavailable": "Source editing is not available here",
