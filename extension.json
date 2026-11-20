@@ -1152,6 +1152,8 @@
 				"visualeditor-command-dialog-cancel",
 				"visualeditor-command-dialog-confirm",
 				"visualeditor-command-dialog-focus-context",
+				"visualeditor-command-dialog-focus-toolbar",
+				"visualeditor-command-dialog-return-from-toolbar",
 				"visualeditor-commentinspector-title",
 				"visualeditor-commentinspector-tooltip",
 				"visualeditor-completionwidget-noresults",
